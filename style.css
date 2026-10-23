@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@700;800&display=swap');
+
+:root {
+  --pink: #ff6fae;
+  --purple: #8a62d6;
+  --ink: #3b2448;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 28px 18px;
+  display: grid;
+  place-items: center;
+  overflow-x: hidden;
+  color: var(--ink);
+  font-family: 'DM Sans', sans-serif;
+  background:
+    radial-gradient(circle at 15% 20%, #ffe0ee 0, transparent 30%),
+    radial-gradient(circle at 85% 80%, #e7ddff 0, transparent 32%),
+    linear-gradient(135deg, #fff7fb, #f7f2ff);
+}
+
+.card {
+  position: relative;
+  width: min(100%, 620px);
+  padding: clamp(28px, 6vw, 58px);
+  text-align: center;
+  border: 1px solid rgba(255,255,255,.9);
+  border-radius: 30px;
+  background: rgba(255,255,255,.78);
+  box-shadow: 0 24px 70px rgba(109, 67, 125, .16);
+  backdrop-filter: blur(12px);
+  animation: rise .8s ease both;
+}
+
+.cake { font-size: 4.5rem; filter: drop-shadow(0 8px 10px #ffc5dd); animation: bob 3s ease-in-out infinite; }
+.eyebrow { margin: 14px 0 8px; color: var(--purple); text-transform: uppercase; letter-spacing: .16em; font-size: .75rem; font-weight: 700; }
+h1 { margin: 0; font: 800 clamp(2.5rem, 8vw, 4.5rem)/1.05 'Playfair Display', serif; letter-spacing: -.04em; }
+h1 span { color: var(--pink); }
+.subtitle { margin: 18px auto 0; max-width: 390px; color: #765f80; line-height: 1.7; }
+.divider { margin: 25px auto; color: var(--pink); }
+.divider span { display: inline-flex; align-items: center; gap: 12px; }
+.divider::before, .divider::after { content: ''; display: inline-block; width: 65px; height: 1px; margin: 0 12px 5px; background: #f3c4db; }
+.message { max-width: 440px; margin: 0 auto; font-size: 1.05rem; line-height: 1.9; color: #604b69; }
+button {
+  margin-top: 28px; padding: 14px 25px; border: 0; border-radius: 999px;
+  color: white; background: linear-gradient(110deg, var(--pink), var(--purple));
+  font: 700 1rem 'DM Sans', sans-serif; cursor: pointer;
+  box-shadow: 0 10px 24px rgba(193, 91, 165, .28);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+button:hover { transform: translateY(-3px); box-shadow: 0 14px 28px rgba(193, 91, 165, .35); }
+button:focus-visible { outline: 3px solid #3b2448; outline-offset: 4px; }
+.signature { margin: 28px 0 0; color: #9a829f; font-size: .9rem; }
+.signature span { color: #7950b6; font-weight: 700; }
+footer { position: fixed; bottom: 12px; color: #9c86a5; font-size: .75rem; text-align: center; }
+
+.confetti {
+  position: fixed; top: -18px; z-index: 10; width: 10px; height: 14px;
+  border-radius: 3px; pointer-events: none; animation: fall 2.8s linear forwards;
+}
+.heart {
+  position: fixed; z-index: 9; bottom: -30px; pointer-events: none;
+  animation: floatUp 3.2s ease-out forwards;
+}
+@keyframes rise { from { opacity: 0; transform: translateY(20px) scale(.98); } to { opacity: 1; transform: translateY(0) scale(1); } }
+@keyframes bob { 0%,100% { transform: translateY(0) rotate(-3deg); } 50% { transform: translateY(-8px) rotate(3deg); } }
+@keyframes fall { to { transform: translate(var(--drift), 110vh) rotate(720deg); opacity: .9; } }
+@keyframes floatUp { to { transform: translateY(-110vh) rotate(20deg); opacity: 0; } }
+
+@media (max-width: 480px) {
+  .card { border-radius: 24px; }
+  .cake { font-size: 3.8rem; }
+  .message { font-size: 1rem; }
+  footer { position: static; margin-top: 18px; }
+  body { align-content: center; }
+}
