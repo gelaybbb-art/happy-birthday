@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#061522" />
+  <meta name="description" content="A deep-sea birthday adventure made for Mark Bernard Raffles — my favorite captain, my safest harbor, and my always." />
+  <title>For Mark — Beyond Every Horizon: Deep Sea Edition</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="grain"></div>
+  <div class="progress"><span id="progressBar"></span></div>
+  <nav class="topbar">
+    <a class="brand" href="#home" aria-label="Back to beginning"><span class="brand-mark">✦</span> M <span class="brand-dot">/</span> B</a>
+    <div class="nav-right"><span class="nav-note">A little universe, made for you</span><button id="soundToggle" class="sound-toggle" aria-label="Toggle ambient sound" title="Ambient ocean sound">♫ <span>sound off</span></button></div>
+  </nav>
+
+  <main>
+    <section class="hero" id="home">
+      <canvas id="starfield" aria-hidden="true"></canvas>
+      <div class="moon-glow"></div>
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="eyebrow-line"></span> NOVEMBER 27 · YOUR DAY <span class="eyebrow-line"></span></p>
+        <h1>To my favorite<br><em>kind of forever.</em></h1>
+        <p class="hero-sub">For Mark Bernard Raffles</p>
+        <p class="hero-intro">The world is wide, the sea is endless — and somehow, my heart found its way to you.</p>
+        <a href="#voyage" class="discover">DIVE INTO OUR LITTLE UNIVERSE <span>↓</span></a>
+      </div>
+      <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
+      <div class="compass compass-hero"><span>N</span><i></i><b>✦</b><small>S</small></div>
+      <div class="hero-coordinate">10° N · 124° E<br><span>somewhere in my heart</span></div>
+      <div class="bottom-label">A LOVE LETTER IN SEVEN TIDES</div>
+    </section>
+
+
+    <section class="deep-sea" id="deepSea">
+      <div class="deep-sea-backdrop"></div>
+      <div class="deep-sea-bubbles" id="seaBubbles" aria-hidden="true"></div>
+      <div class="sea-creature creature-jelly" aria-hidden="true"><span class="jelly-cap"></span><i></i><i></i><i></i><i></i></div>
+      <div class="sea-creature creature-fish fish-one" aria-hidden="true">🐠</div>
+      <div class="sea-creature creature-fish fish-two" aria-hidden="true">🐟</div>
+      <div class="sea-creature creature-turtle" aria-hidden="true">🐢</div>
+      <div class="sea-creature creature-shark" aria-hidden="true">🦈</div>
+      <div class="sea-creature creature-octopus" aria-hidden="true">🐙</div>
+      <div class="sea-creature creature-diver" aria-hidden="true"><span class="diver-bubble">○ ○ ○</span><span class="diver-mask"></span><span class="diver-tank"></span><span class="diver-body"></span><span class="diver-fins"></span></div>
+      <div class="underwater-light"></div>
+      <div class="underwater-content reveal">
+        <p class="underwater-kicker"><span>✦</span> A SECRET WORLD BELOW THE WAVES <span>✦</span></p>
+        <h2>Even the deep<br>has its <em>wonders.</em></h2>
+        <p class="underwater-copy">For the captain who knows the sea is more than a horizon — it's a whole universe waiting to be explored.</p>
+        <div class="ocean-tags"><span>✧ hidden wonders</span><span>✧ brave explorers</span><span>✧ endless blue</span></div>
+      </div>
+      <div class="wreck-scene" aria-hidden="true">
+        <div class="wreck-rock rock-a"></div><div class="wreck-rock rock-b"></div>
+        <div class="wreck-ship">
+          <div class="wreck-hull"></div><div class="wreck-deck"></div><div class="wreck-cabin"></div><div class="wreck-mast mast-a"></div><div class="wreck-mast mast-b"></div>
+          <div class="wreck-window w1"></div><div class="wreck-window w2"></div><div class="wreck-window w3"></div>
+        </div>
+        <div class="treasure-chest"><span>✦</span></div>
+        <div class="wreck-label">LOST TREASURES · FOUND MEMORIES</div>
+      </div>
+      <div class="deep-sea-footer"><span>01 — THE REEF</span><span>GO A LITTLE DEEPER ↓</span><span>THE OCEAN IS ALIVE</span></div>
+    </section>
+
+    <section class="manifesto section-pad" id="voyage">
+      <div class="section-kicker reveal">01 / THE REASON</div>
+      <div class="manifesto-grid">
+        <h2 class="reveal">Some people feel<br>like <em>coming home.</em></h2>
+        <div class="manifesto-text reveal">
+          <p>And you, my love, feel like that rare moment when the ocean goes quiet, the horizon turns gold, and everything finally makes sense.</p>
+          <p>You spend your days navigating the sea. But if I could choose one place in this enormous world to find you, I'd choose you — every time, in every lifetime, under every sky.</p>
+          <span class="signature">— your girl, always</span>
+        </div>
+      </div>
+      <div class="thin-rule"><span>✧</span></div>
+    </section>
+
+    <section class="gallery-section section-pad" id="memories">
+      <div class="section-kicker reveal">02 / LITTLE PIECES OF US</div>
+      <div class="section-heading reveal"><h2>My favorite <em>view.</em></h2><p>Not the ocean. Not the sunset.<br>It's you, in all your ordinary magic.</p></div>
+      <div class="memory-gallery">
+        <figure class="memory-card memory-large reveal" data-depth="0.08">
+          <div class="photo-frame"><img src="images/mark-portrait.jpeg" alt="Mark, one of my favorite people" loading="lazy"><span class="photo-shine"></span></div>
+          <figcaption><span>THE ONE I ADORE</span><b>My favorite face.</b></figcaption><span class="photo-index">01</span>
+        </figure>
+        <figure class="memory-card memory-small reveal" data-depth="0.12">
+          <div class="photo-frame"><img src="images/mark-cafe.jpeg" alt="A sweet memory with Mark" loading="lazy"><span class="photo-shine"></span></div>
+          <figcaption><span>A MOMENT TO KEEP</span><b>Little things, forever.</b></figcaption><span class="photo-index">02</span>
+        </figure>
+        <figure class="memory-card memory-small memory-offset reveal" data-depth="0.06">
+          <div class="photo-frame"><img src="images/our-memory.jpeg" alt="A memory close to my heart" loading="lazy"><span class="photo-shine"></span></div>
+          <figcaption><span>MY SOFT PLACE</span><b>Where my heart rests.</b></figcaption><span class="photo-index">03</span>
+        </figure>
+        <figure class="memory-card memory-large memory-last reveal" data-depth="0.1">
+          <div class="photo-frame"><img src="images/mark-smile.jpeg" alt="Mark smiling" loading="lazy"><span class="photo-shine"></span></div>
+          <figcaption><span>PLEASE KEEP THIS SMILE</span><b>It makes my world brighter.</b></figcaption><span class="photo-index">04</span>
+        </figure>
+      </div>
+      <p class="gallery-footnote reveal">Four little windows into the person who means so much to me.</p>
+    </section>
+
+    <section class="ocean-interlude">
+      <div class="ocean-lines"></div><div class="lighthouse-light"></div>
+      <div class="interlude-content reveal"><span class="tiny-star">✧</span><p>TO THE CAPTAIN OF MY HEART</p><h2>May every sea<br>bring you home <em>safely.</em></h2><span class="interlude-sub">And may you always know there is someone here, loving you from every shore.</span></div>
+      <div class="ship-silhouette" aria-hidden="true"><svg viewBox="0 0 340 150" role="img"><path d="M22 104 L310 104 L276 132 L64 132 Z" fill="currentColor"/><path d="M100 102 L100 53 L150 53 L150 102 M157 102 L157 35 L208 35 L208 102 M213 102 L213 62 L250 62 L250 102" fill="currentColor"/><path d="M111 60 L140 60 M168 44 L198 44 M223 71 L241 71" stroke="#d6b779" stroke-width="3"/><path d="M12 140 Q40 132 68 140 T124 140 T180 140 T236 140 T292 140 T348 140" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
+    </section>
+
+    <section class="birthday-letter section-pad" id="letter">
+      <div class="section-kicker reveal">03 / A NOTE FROM MY HEART</div>
+      <div class="letter-shell reveal">
+        <div class="letter-stamp">M<br><span>✦</span></div>
+        <div class="letter-meta"><span>PRIVATE TRANSMISSION</span><span>27 · 11</span></div>
+        <h2>Dear Mark,</h2>
+        <div class="letter-body">
+          <p>Happy birthday, my love.</p>
+          <p>I wish I could fold every mile between us into a tiny paper boat and send it straight to you. I wish I could be there to see your face, hear your laugh, and remind you in person how deeply you are loved.</p>
+          <p>I'm proud of the man you are — brave enough to follow the horizon, steady enough to lead, and special in ways you may not always see in yourself. I hope this new year of your life brings you calm seas, good health, big dreams, and a hundred reasons to smile.</p>
+          <p>Wherever your ship takes you, remember this: you don't have to look at the stars to find someone thinking of you. Somewhere beneath this same sky, I am. And no distance can make my heart feel any less close to yours.</p>
+          <p>Keep chasing horizons, Captain. I'll keep cheering for you from my little corner of the world.</p>
+          <p class="letter-ending">I love you beyond every horizon.<br><em>Happy birthday, my favorite person.</em></p>
+        </div>
+        <div class="letter-signoff"><span>With all my love,</span><b>Always yours <i>♥</i></b></div>
+      </div>
+    </section>
+
+    <section class="wishes section-pad">
+      <div class="section-kicker reveal">04 / WHAT I WISH FOR YOU</div>
+      <h2 class="reveal">A new year of life.<br><em>A thousand beautiful things.</em></h2>
+      <div class="wish-grid">
+        <article class="wish reveal"><span class="wish-icon">☼</span><span class="wish-num">01</span><h3>Peaceful seas</h3><p>Safe journeys, gentle waters, and a safe return from every voyage.</p></article>
+        <article class="wish reveal"><span class="wish-icon">✧</span><span class="wish-num">02</span><h3>Big horizons</h3><p>Dreams that grow bigger, doors that open, and chances that find you.</p></article>
+        <article class="wish reveal"><span class="wish-icon">♡</span><span class="wish-num">03</span><h3>Soft happiness</h3><p>Small joys, deep rest, real laughter, and people who love you well.</p></article>
+        <article class="wish reveal"><span class="wish-icon">∞</span><span class="wish-num">04</span><h3>Endless love</h3><p>May you never question how important you are to someone — to me.</p></article>
+      </div>
+    </section>
+
+    <section class="bottle-section" id="bottle">
+      <canvas id="sparkles" aria-hidden="true"></canvas>
+      <div class="bottle-content reveal">
+        <div class="section-kicker">05 / FOUND AT SEA</div>
+        <h2>One last thing<br><em>for your heart.</em></h2>
+        <p>Some messages are too important to leave unsent.</p>
+        <button class="bottle-button" id="openBottle"><span class="bottle-icon">♧</span><span>OPEN YOUR MESSAGE</span><i>↗</i></button>
+        <div class="bottle-hint">Tap the bottle. This one is only for you.</div>
+      </div>
+      <div class="bottle-art" id="bottleArt" aria-label="A message in a bottle illustration">
+        <div class="bottle-glow"></div><div class="bottle-neck"></div><div class="bottle-cork"></div><div class="bottle-body"><div class="bottle-paper"></div><div class="bottle-reflection"></div></div>
+      </div>
+    </section>
+
+    <section class="finale section-pad" id="finale">
+      <div class="finale-stars">✦　 ·　 ✧　　·　 ✦</div>
+      <div class="section-kicker reveal">06 / UNTIL EVERY HORIZON</div>
+      <h2 class="reveal">The sea is vast.<br><em>My love is vaster.</em></h2>
+      <p class="finale-copy reveal">Happy birthday, Captain Mark Bernard Raffles.<br>My favorite person. My safest harbor. My always.</p>
+      <div class="finale-date reveal"><span>27</span><i></i><span>NOV</span><i></i><span>WITH LOVE, FOREVER</span></div>
+      <a href="#home" class="back-to-top">BACK TO THE STARS ↑</a>
+      <footer>MADE WITH LOVE, UNDER THE SAME SKY <span>♥</span></footer>
+    </section>
+  </main>
+
+  <div class="modal" id="letterModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-card">
+      <button class="modal-close" id="closeModal" aria-label="Close message">×</button>
+      <div class="modal-star">✦</div><p class="modal-kicker">A MESSAGE JUST FOR YOU</p>
+      <h2 id="modalTitle">If the ocean could speak…</h2>
+      <p class="modal-message">It would tell you what I already know: that the world is lucky to have you in it. That your heart is worth protecting, your dreams are worth chasing, and your life deserves all the beautiful things coming your way.</p>
+      <p class="modal-message">And if you ever feel far from the people who love you, look up at the night sky. We're under the same stars, and a piece of my heart is always sailing beside you.</p>
+      <div class="modal-sign">I love you, Mark. Always. <span>♥</span></div>
+      <button class="modal-done" id="modalDone">KEEP THIS IN YOUR HEART ✦</button>
+    </div>
+  </div>
+  <div class="toast" id="toast" role="status">A little love is on its way ✦</div>
+  <script src="script.js"></script>
+</body>
+</html>
