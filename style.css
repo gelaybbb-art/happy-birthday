@@ -1,0 +1,227 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;600;700&display=swap');
+*{box-sizing:border-box}html,body{width:100%;height:100%;margin:0;overflow:hidden}body{background:#03283d;font-family:"DM Sans",Arial,sans-serif}
+button{font:inherit}.ocean{position:relative;width:100%;height:100svh;min-height:520px;overflow:hidden;isolation:isolate;color:#f7f1e7;background:radial-gradient(ellipse at 50% -10%,#b5eff0 0%,#398fa2 18%,transparent 48%),radial-gradient(ellipse at 12% 40%,#0d7890 0%,transparent 45%),linear-gradient(180deg,#07516c,#064b68 35%,#06334f 72%,#021b30)}
+.ocean:after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,#b8f2ed12,transparent 38%,#00152255)}
+.sun-rays{position:absolute;inset:-20% 10% 15%;z-index:0;background:conic-gradient(from 190deg at 50% 0%,transparent 0deg,#c8ffff1e 12deg,transparent 25deg,#c8ffff18 42deg,transparent 58deg,#c8ffff17 75deg,transparent 95deg);filter:blur(13px);animation:rays 15s ease-in-out infinite alternate}
+.water-shimmer{position:absolute;inset:0;z-index:0;opacity:.35;background:repeating-linear-gradient(174deg,transparent 0 70px,#a5f3f21c 72px,transparent 76px 145px);animation:shimmer 18s ease-in-out infinite alternate}
+@keyframes rays{to{transform:translateX(35px) rotate(5deg);opacity:.55}}@keyframes shimmer{to{transform:translateY(28px);opacity:.18}}
+.greeting{position:absolute;z-index:4;top:9%;left:50%;width:min(92%,700px);transform:translateX(-50%);text-align:center;text-shadow:0 3px 24px #00192788}
+.eyebrow{margin:0 0 18px;color:#f2d092;font-size:10px;font-weight:700;letter-spacing:.28em}.greeting h1{margin:0;font:400 clamp(56px,8vw,100px)/.9 "Cormorant Garamond",Georgia,serif;letter-spacing:-.035em}.greeting h1 em{color:#f3cc83;font-weight:400}.from{margin:15px 0 0;font:19px "Cormorant Garamond",Georgia,serif;color:#d5e9e8}
+.creature{position:absolute;z-index:3;display:block;filter:drop-shadow(0 8px 12px #001b2b66);user-select:none}.fish{font-size:clamp(28px,4vw,48px)}.fish-a{left:17%;top:46%;animation:swim-right 13s ease-in-out infinite}.fish-b{right:15%;top:53%;animation:swim-left 16s ease-in-out infinite}.fish-c{left:30%;bottom:17%;font-size:34px;animation:swim-right 18s ease-in-out infinite}.turtle{left:8%;bottom:13%;font-size:42px;animation:drift 9s ease-in-out infinite}.jelly{right:23%;top:31%;font-size:55px;opacity:.8;animation:drift 7s ease-in-out infinite}.shark{right:7%;top:27%;font-size:43px;opacity:.75;animation:swim-left 22s ease-in-out infinite}.octopus{right:10%;bottom:12%;font-size:38px;opacity:.8;animation:drift 8s ease-in-out infinite}
+@keyframes swim-right{0%,100%{translate:0 0}50%{translate:65px -18px}}@keyframes swim-left{0%,100%{translate:0 0;scale:-1 1}50%{translate:-55px 18px;scale:-1 1}}@keyframes drift{0%,100%{translate:0 0}50%{translate:0 -16px}}
+.sea-floor{position:absolute;z-index:2;bottom:0;left:0;width:100%;height:18%;background:linear-gradient(180deg,transparent,#062b39aa 45%,#031925)}.rock{position:absolute;bottom:-25px;left:38%;width:25%;height:85px;border-radius:60% 60% 0 0;background:#183f4a;opacity:.75}
+.coral{position:absolute;bottom:8px;width:70px;height:75px;border:8px solid #c87978;border-bottom:0;border-radius:45px 45px 0 0;opacity:.7}.coral:before,.coral:after{content:"";position:absolute;bottom:20px;width:27px;height:43px;border:6px solid #c87978;border-bottom:0;border-radius:30px 30px 0 0}.coral:before{left:-24px;transform:rotate(-30deg)}.coral:after{right:-25px;transform:rotate(30deg)}.coral-a{left:7%}.coral-b{right:7%;transform:scale(1.2);border-color:#d4a36c}.coral-b:before,.coral-b:after{border-color:#d4a36c}
+.weed{position:absolute;bottom:0;width:45px;height:115px;border-left:5px solid #3d9979;border-radius:50%;opacity:.7}.weed:before,.weed:after{content:"";position:absolute;left:8px;width:32px;height:48px;border-left:5px solid #3d9979;border-radius:50%}.weed:before{top:20px;transform:rotate(-30deg)}.weed:after{top:55px;transform:rotate(30deg)}.weed-a{left:23%}.weed-b{right:24%;transform:scale(.8)}
+.message-bottle{position:absolute;z-index:6;left:50%;top:61%;width:190px;height:330px;transform:translate(-50%,-50%) rotate(-10deg);border:0;background:none;padding:0;cursor:pointer;animation:bob 5s ease-in-out infinite;filter:drop-shadow(0 20px 25px #00111e99)}.message-bottle:hover{filter:drop-shadow(0 0 30px #f4d28b88)}@keyframes bob{0%,100%{translate:0 0}50%{translate:0 -13px}}
+.bottle-halo{position:absolute;inset:0 -45%;border-radius:50%;background:radial-gradient(ellipse,#f0d18b40,transparent 68%);filter:blur(8px)}.cork{position:absolute;top:0;left:80px;width:30px;height:25px;border-radius:5px 5px 2px 2px;background:repeating-linear-gradient(90deg,#87633d,#87633d 4px,#b18a58 5px,#b18a58 7px);box-shadow:inset 0 2px #e2c391}.neck{position:absolute;top:22px;left:73px;width:44px;height:75px;border:2px solid #d8f4ec99;border-bottom:0;border-radius:9px 9px 0 0;background:linear-gradient(90deg,#b9e7e522,#e6ffff33,#b9e7e511)}
+.glass{position:absolute;top:91px;left:8px;width:174px;height:226px;border:2px solid #d8f4ec99;border-radius:44% 44% 25% 25% / 22% 22% 15% 15%;background:linear-gradient(90deg,#b9e7e522,#e6ffff25 45%,#b9e7e511);box-shadow:inset 12px 0 20px #e6ffff22,inset -10px 0 20px #001a2a33}.paper{position:absolute;top:53px;left:42px;width:88px;height:118px;display:grid;place-items:center;background:#e6d3a8;border:5px double #9d8158;transform:rotate(5deg);box-shadow:0 5px 15px #001a2a55;color:#a04d4d;font-size:25px}.shine{position:absolute;top:18px;left:22px;width:13px;height:155px;border-radius:50%;background:#fff8;opacity:.22;transform:rotate(8deg)}.bottle-label{position:absolute;top:calc(100% + 16px);left:50%;width:230px;transform:translateX(-50%) rotate(10deg);font-size:9px;letter-spacing:.17em;color:#e9d9b6;text-shadow:0 2px 8px #001;white-space:nowrap}
+.bubbles{position:absolute;inset:0;z-index:2;pointer-events:none}.bubble{position:absolute;bottom:-20px;border:1px solid #c8f7f766;border-radius:50%;background:#d8ffff12;animation:rise linear infinite}@keyframes rise{to{transform:translate3d(var(--drift),-110vh,0);opacity:0}}
+.message-modal{position:fixed;inset:0;z-index:20;display:grid;place-items:center;padding:20px;opacity:0;visibility:hidden;transition:.3s}.message-modal.open{opacity:1;visibility:visible}.modal-backdrop{position:absolute;inset:0;border:0;background:#00111ddd;backdrop-filter:blur(9px)}
+.letter{position:relative;width:min(560px,100%);max-height:88vh;overflow:auto;padding:38px clamp(24px,5vw,48px);background:linear-gradient(145deg,#123e50,#062338);border:1px solid #e8c78399;box-shadow:0 25px 90px #0009;color:#f5eee1}.close{position:absolute;right:17px;top:10px;border:0;background:none;color:#f4e5c8;font-size:30px;cursor:pointer}.letter-kicker{color:#f0c77d;font-size:9px;letter-spacing:.22em;font-weight:700}.letter h2{font:400 clamp(36px,6vw,48px)/1 "Cormorant Garamond",Georgia,serif;margin:18px 0 22px}.letter>p:not(.letter-kicker){font:18px/1.55 "Cormorant Garamond",Georgia,serif;color:#dce7e3;margin:0 0 13px}.signoff{margin-top:20px;color:#f0c77d;font:italic 22px "Cormorant Garamond",Georgia,serif}.done{margin-top:23px;padding:12px 16px;background:transparent;border:1px solid #e8c78399;color:#f5eee1;font-size:9px;letter-spacing:.15em;cursor:pointer}
+@media(max-width:600px){.greeting{top:9%}.greeting h1{font-size:61px}.fish-a{left:5%;top:48%}.fish-b{right:4%;top:52%}.fish-c{left:15%;bottom:15%}.turtle{left:2%;bottom:10%;font-size:32px}.jelly{right:10%;top:34%;font-size:43px}.shark{right:2%;top:26%;font-size:32px}.octopus{right:3%;bottom:9%;font-size:30px}.message-bottle{top:62%;transform:translate(-50%,-50%) scale(.82) rotate(-10deg)}.message-bottle:hover{transform:translate(-50%,-50%) scale(.84) rotate(-8deg)}.coral-a{left:-3%}.coral-b{right:-3%}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important}}
+
+/* Friendly guide fish + large readable bottle instruction */
+.bottle-guide{
+ position:absolute;z-index:7;left:calc(50% + 145px);top:55%;
+ display:flex;align-items:center;gap:12px;
+ transform:translateY(-50%);
+ filter:drop-shadow(0 8px 12px #00152266);
+}
+.guide-fish{
+ position:relative;flex:0 0 100px;width:100px;height:66px;
+ border-radius:52% 48% 48% 52%;
+ background:linear-gradient(145deg,#ffdc78,#f59c48 72%,#e87943);
+ border:2px solid #ffe7a8;
+ animation:guideFishBob 3s ease-in-out infinite;
+}
+.guide-fish:before{
+ content:"";position:absolute;right:19px;top:17px;width:9px;height:9px;
+ border-radius:50%;background:#183348;box-shadow:0 0 0 3px #fff8;
+}
+.guide-fin{position:absolute;left:34px;top:-16px;width:28px;height:23px;background:#f4a34e;border:2px solid #ffe4a0;border-radius:100% 0 100% 0;transform:rotate(12deg)}
+.guide-tail{position:absolute;left:-25px;top:16px;width:32px;height:34px;background:#ef9145;clip-path:polygon(100% 50%,0 0,12% 50%,0 100%)}
+.guide-eye{position:absolute;right:17px;top:17px;width:8px;height:8px;border-radius:50%;background:#142c3a;z-index:2}
+.guide-smile{position:absolute;right:11px;top:31px;width:17px;height:9px;border-bottom:3px solid #813d2c;border-radius:0 0 16px 16px}
+.guide-sign{
+ position:relative;min-width:180px;padding:12px 15px 8px;
+ text-align:center;border:3px solid #f4d18c;border-radius:10px;
+ background:#fff4d9;color:#12374a;box-shadow:0 5px 0 #9c7046;
+ transform:rotate(-2deg);
+}
+.guide-sign:before{
+ content:"";position:absolute;left:-12px;top:50%;width:14px;height:14px;
+ background:#fff4d9;border-left:3px solid #f4d18c;border-bottom:3px solid #f4d18c;
+ transform:translateY(-50%) rotate(45deg);
+}
+.guide-sign span:first-child{display:block;font-size:10px;font-weight:700;letter-spacing:.15em;color:#a75b37}
+.guide-sign strong{display:block;font-size:15px;line-height:1.25;letter-spacing:.04em;margin-top:3px}
+.guide-arrow{display:block;font-size:24px;line-height:1;color:#c76e39;font-weight:700;animation:arrowNudge 1s ease-in-out infinite}
+@keyframes guideFishBob{0%,100%{translate:0 0}50%{translate:0 -8px}}
+@keyframes arrowNudge{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
+@media(max-width:700px){
+ .bottle-guide{left:50%;top:46%;transform:translate(-50%,-50%) scale(.88);gap:8px}
+ .guide-fish{flex-basis:82px;width:82px;height:55px}
+ .guide-sign{min-width:165px;padding:10px 11px 7px}
+ .guide-sign strong{font-size:14px}
+ .message-bottle{top:68%}
+}
+@media(max-width:390px){
+ .bottle-guide{top:46%;transform:translate(-50%,-50%) scale(.76)}
+ .message-bottle{top:69%;transform:translate(-50%,-50%) scale(.72) rotate(-10deg)}
+}
+
+/* Aim the guide arrow directly toward the bottle (which sits down-left of the sign). */
+.guide-arrow{
+ position:absolute;left:-23px;bottom:-37px;
+ font-size:34px;line-height:1;color:#fff0bd;
+ transform:rotate(-8deg);
+ text-shadow:0 2px 8px #001b2b99;
+}
+@keyframes arrowNudge{0%,100%{translate:0 0}50%{translate:-4px 5px}}
+@media(max-width:700px){
+ .guide-arrow{left:50%;bottom:-36px;transform:translateX(-50%);font-size:32px}
+}
+
+
+/* A playful Angel & Devil surprise that appears after the letter is closed. */
+.devil-reveal{
+  position:fixed;inset:0;z-index:30;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;text-align:center;padding:24px;
+  pointer-events:none;opacity:0;visibility:hidden;
+  background:radial-gradient(ellipse at 50% 55%,#54204dcc 0%,#160d2caa 42%,#061b2c88 75%,transparent 100%);
+}
+.devil-reveal.show{visibility:visible;animation:devilSceneIn .45s ease-out forwards}
+.devil-sparkles{position:absolute;top:24%;font-size:clamp(20px,4vw,34px);letter-spacing:.3em;color:#ffd7ed;text-shadow:0 0 18px #ff5eaa;animation:sparkleFloat 2s ease-in-out infinite}
+.devil-character{position:relative;display:grid;place-items:center;width:180px;height:160px;
+  border-radius:50%;background:radial-gradient(circle,#ff8acb55,transparent 68%);
+  animation:devilPop .75s cubic-bezier(.2,1.6,.4,1) both}
+.devil-face{font-size:clamp(92px,16vw,140px);filter:drop-shadow(0 10px 20px #090018aa)}
+.devil-horns{position:absolute;top:0;left:50%;transform:translateX(-50%) rotate(180deg);
+  color:#ff6a9e;font-size:35px;opacity:.0}
+.devil-tail{position:absolute;right:2px;bottom:24px;color:#ff8ab8;font-size:48px;transform:rotate(-25deg);animation:tailWiggle .7s ease-in-out infinite alternate}
+.devil-title{margin:5px 0 0;color:#ffe0f0;font-size:clamp(17px,3vw,23px);font-weight:700;letter-spacing:.2em;text-shadow:0 3px 18px #ff3b93aa}
+.devil-note{margin:12px 0 0;color:#fff0f6;font:italic clamp(23px,4vw,32px) "Cormorant Garamond",Georgia,serif;text-shadow:0 2px 14px #ff5eaa99}
+.angel-heart{margin-top:20px;font-size:29px;animation:heartBeat 1s ease-in-out infinite}
+@keyframes devilSceneIn{from{opacity:0}to{opacity:1}}
+@keyframes devilPop{0%{transform:translateY(90px) scale(.2) rotate(-18deg);opacity:0}65%{transform:translateY(-12px) scale(1.12) rotate(5deg);opacity:1}100%{transform:translateY(0) scale(1) rotate(0);opacity:1}}
+@keyframes sparkleFloat{0%,100%{transform:translateY(0);opacity:.65}50%{transform:translateY(-12px);opacity:1}}
+@keyframes tailWiggle{from{transform:rotate(-35deg)}to{transform:rotate(5deg)}}
+@keyframes heartBeat{0%,100%{transform:scale(1)}50%{transform:scale(1.13)}}
+.devil-reveal.hide{animation:devilSceneOut .5s ease-in forwards}
+@keyframes devilSceneOut{to{opacity:0;visibility:hidden}}
+@media(prefers-reduced-motion:reduce){.devil-reveal.show,.devil-character,.devil-sparkles,.devil-tail,.angel-heart{animation:none!important}}
+
+
+/* Cute devil surprise: appears to burst out after the birthday letter closes. */
+.devil-reveal{
+  overflow:hidden;
+  background:
+    radial-gradient(ellipse at 50% 58%,#ff477b55 0%,#4a123caa 34%,#160d2dcc 70%,#031c2ddd 100%);
+  isolation:isolate;
+}
+.devil-reveal:before{
+  content:"";position:absolute;inset:0;z-index:-1;opacity:.55;
+  background:repeating-conic-gradient(from 0deg at 50% 52%,#ff8ab322 0deg 7deg,transparent 7deg 18deg);
+  animation:devilSpin 14s linear infinite;
+  mask-image:radial-gradient(ellipse at center,#000 0%,transparent 68%);
+}
+.devil-burst{
+  position:absolute;left:50%;top:52%;width:min(78vw,470px);aspect-ratio:1;
+  border:2px solid #ff9ab866;border-radius:50%;
+  box-shadow:0 0 35px #ff478b55,inset 0 0 45px #ff478b33;
+  transform:translate(-50%,-50%) scale(.15);opacity:0;
+}
+.devil-reveal.show .devil-burst{animation:burstRing 1s .08s ease-out forwards}
+.devil-character{
+  z-index:2;width:210px;height:190px;
+  background:radial-gradient(circle,#ff8acb77 0%,#f22c7850 38%,transparent 72%);
+  filter:drop-shadow(0 12px 25px #090018aa);
+}
+.devil-face{
+  display:block;position:relative;z-index:2;
+  font-size:clamp(105px,19vw,155px);
+  animation:devilWiggle 1.2s .8s ease-in-out infinite;
+}
+.devil-flame{
+  position:absolute;z-index:1;font-size:clamp(32px,6vw,48px);
+  filter:drop-shadow(0 0 12px #ff744e);
+}
+.flame-left{left:2px;top:35px;transform:rotate(-22deg);animation:flameDance .55s ease-in-out infinite alternate}
+.flame-right{right:2px;top:35px;transform:rotate(22deg);animation:flameDance .7s .15s ease-in-out infinite alternate}
+.devil-tail{right:-5px;bottom:16px;font-size:55px}
+.devil-title{z-index:2;margin-top:14px;letter-spacing:.12em}
+.devil-note{z-index:2}
+.devil-smoke{
+  position:absolute;left:50%;top:53%;width:240px;height:240px;border-radius:50%;
+  background:radial-gradient(circle,#f5a1d044 0%,#a44d9c22 40%,transparent 70%);
+  filter:blur(10px);opacity:0;pointer-events:none;
+}
+.devil-reveal.show .smoke-one{animation:smokePuff 1.5s .05s ease-out both}
+.devil-reveal.show .smoke-two{animation:smokePuff 1.7s .25s ease-out both;animation-direction:reverse}
+@keyframes devilSpin{to{transform:rotate(360deg)}}
+@keyframes burstRing{0%{transform:translate(-50%,-50%) scale(.15);opacity:0}35%{opacity:.9}100%{transform:translate(-50%,-50%) scale(1.2);opacity:0}}
+@keyframes devilWiggle{0%,100%{transform:rotate(-4deg) translateY(0)}50%{transform:rotate(4deg) translateY(-7px)}}
+@keyframes flameDance{from{translate:0 5px;scale:.9}to{translate:0 -7px;scale:1.12}}
+@keyframes smokePuff{0%{transform:translate(-50%,-35%) scale(.2);opacity:0}35%{opacity:.8}100%{transform:translate(-50%,-85%) scale(1.65);opacity:0}}
+@media(max-width:600px){
+  .devil-character{width:180px;height:165px}
+  .devil-title{max-width:90%;line-height:1.5}
+}
+@media(prefers-reduced-motion:reduce){
+  .devil-reveal:before,.devil-reveal.show .devil-burst,.devil-reveal.show .smoke-one,
+  .devil-reveal.show .smoke-two,.devil-face,.devil-flame{animation:none!important}
+}
+
+
+/* Mobile layout: give the guide and bottle their own clear vertical space. */
+.letter-close-button{
+  display:block;margin:22px auto 0;padding:10px 20px;
+  border:1px solid #e8c78399;border-radius:999px;
+  background:#f0c77d;color:#123246;
+  font-size:10px;font-weight:700;letter-spacing:.14em;
+  cursor:pointer;
+}
+.letter-close-button:hover{background:#ffe0a5}
+@media(max-width:700px){
+  .greeting{top:5%;width:94%}
+  .eyebrow{margin-bottom:10px;font-size:9px}
+  .greeting h1{font-size:clamp(48px,12vw,62px)}
+  .from{margin-top:9px;font-size:17px}
+  .bottle-guide{
+    top:40%;left:50%;gap:7px;
+    transform:translate(-50%,-50%) scale(.76);
+    transform-origin:center;
+  }
+  .guide-fish{flex-basis:78px;width:78px;height:53px}
+  .guide-sign{min-width:154px;padding:9px 10px 7px}
+  .guide-sign span:first-child{font-size:9px}
+  .guide-sign strong{font-size:12px}
+  .guide-arrow{left:50%;bottom:-34px;font-size:29px;transform:translateX(-50%)}
+  .message-bottle{
+    top:73%;left:50%;
+    transform:translate(-50%,-50%) scale(.68) rotate(-10deg);
+  }
+  .message-bottle:hover{transform:translate(-50%,-50%) scale(.70) rotate(-8deg)}
+}
+@media(max-width:390px){
+  .greeting{top:4%}
+  .greeting h1{font-size:48px}
+  .bottle-guide{top:39%;transform:translate(-50%,-50%) scale(.68)}
+  .message-bottle{top:72%;transform:translate(-50%,-50%) scale(.62) rotate(-10deg)}
+  .message-bottle:hover{transform:translate(-50%,-50%) scale(.64) rotate(-8deg)}
+}
+@media(max-height:700px) and (max-width:700px){
+  .greeting{top:3%}
+  .greeting h1{font-size:46px}
+  .from{margin-top:6px}
+  .bottle-guide{top:39%;transform:translate(-50%,-50%) scale(.64)}
+  .message-bottle{top:73%;transform:translate(-50%,-50%) scale(.56) rotate(-10deg)}
+  .message-bottle:hover{transform:translate(-50%,-50%) scale(.58) rotate(-8deg)}
+}
+
+/* Keep the close control visibly inside the letter panel, after the sign-off. */
+.letter{display:flex;flex-direction:column}
+.letter-copy{width:100%}
+.letter-close-button{align-self:center;flex:0 0 auto}
